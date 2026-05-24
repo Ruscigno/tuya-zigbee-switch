@@ -3238,10 +3238,12 @@ REMOTE_IHSENO_5TQXPINE_TS0044:
   tuya_module: ZT3L
   mcu_family: Telink
   mcu: TLSR8258
-  # PCB "IHSENO V3" / "4sw-03" confirmada visualmente como idêntica à variante
-  # _TZ3000_mh9px7cq. Chip marking obfuscado "Z2 ZHBP2526 EUL 782" — TLSR8258
-  # remarked (prática comum em OEMs chineses). Mesmo config_str da iHseno padrão.
-  config_str: 5tqxpine;TS0044-CUS;LC0;SD2u;SC2u;SC3u;SB4u;BTD2;M;
+  # PCB "IHSENO V3" / "4sw-03". Chip marking obfuscado "Z2 ZHBP2526 EUL 782"
+  # — TLSR8258 remarked. v1 com pull-up (idem mh9px7cq, SD2u;SC2u;SC3u;SB4u)
+  # flashou OK mas botões não detectados em 2026-05-24 — provavelmente esta PCB
+  # conecta botões a VCC (não GND como mh9px7cq), exigindo pull-down interno.
+  # v2 testa pull-down nos 4 botões (idem zgyzgdua Moes wireless).
+  config_str: 5tqxpine;TS0044-CUS;LC0;SD2d;SC2d;SC3d;SB4d;BTD2;M;
   alt_config_str: null
   old_manufacturer_names: null
   old_zb_models: null
@@ -3249,7 +3251,7 @@ REMOTE_IHSENO_5TQXPINE_TS0044:
   # iHseno padrão; se OTA não aparecer no Z2M, atualizar este valor.
   stock_manufacturer_id: 4417
   stock_image_type: 54179
-  firmware_image_type: 47008
+  firmware_image_type: 47009
   build: yes
   status: fully_supported
   info: >-
