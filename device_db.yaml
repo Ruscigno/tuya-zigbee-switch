@@ -3223,6 +3223,44 @@ REMOTE_IHSENO_TS0044:
   store:
   - https://www.aliexpress.com/item/1005005792534172.html
   - https://allegro.pl/oferta/pilot-atlo-rc4-tuya-zigbee-tuya-smart-da-16513965398
+REMOTE_IHSENO_5TQXPINE_TS0044:
+  human_name: iHseno 4-button remote (_TZ3000_5tqxpine variant)
+  category: remote
+  power: LR23A
+  neutral: without
+  output: nothing
+  device_type: end_device
+  stock_model_name: TS0044
+  stock_manufacturer_name: _TZ3000_5tqxpine
+  stock_converter_manufacturer: Tuya
+  stock_converter_model: TS0044
+  override_z2m_device: _TZ3000_5tqxpine
+  tuya_module: ZT3L
+  mcu_family: Telink
+  mcu: TLSR8258
+  # PCB "IHSENO V3" / "4sw-03" confirmada visualmente como idêntica à variante
+  # _TZ3000_mh9px7cq. Chip marking obfuscado "Z2 ZHBP2526 EUL 782" — TLSR8258
+  # remarked (prática comum em OEMs chineses). Mesmo config_str da iHseno padrão.
+  config_str: 5tqxpine;TS0044-CUS;LC0;SD2u;SC2u;SC3u;SB4u;BTD2;M;
+  alt_config_str: null
+  old_manufacturer_names: null
+  old_zb_models: null
+  # stock_image_type a confirmar via Z2M debug logs do device — herdado da
+  # iHseno padrão; se OTA não aparecer no Z2M, atualizar este valor.
+  stock_manufacturer_id: 4417
+  stock_image_type: 54179
+  firmware_image_type: 47008
+  build: yes
+  status: fully_supported
+  info: >-
+    Variante _TZ3000_5tqxpine da iHseno 4-button. Mesma PCB ("IHSENO V3 / 4sw-03")
+    e mesmo MCU (TLSR8258) da REMOTE_IHSENO_TS0044. Diferença apenas no
+    stock_manufacturer_name reportado pelo Tuya. Z2M expõe como
+    "iHseno TS0044_5tqxpine" — https://www.zigbee2mqtt.io/devices/TS0044_5tqxpine.html
+  threads:
+   - https://github.com/romasku/tuya-zigbee-switch/issues/171
+  store:
+  - https://www.aliexpress.com/item/1005005792534172.html
 REMOTE_IHSENO_TS0046:
   human_name: iHseno 6-button remote
   category: remote
